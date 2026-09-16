@@ -1,17 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@200;300&display=swap');
 :root {
-  --primary-color: #e9f0fc;
   --secondary-color: #fffff7;
   --tertiary-color: #030813;
-  --quaternary-color: #08142d;
-  --quinary-color: #0073e6;
   --text-color: hsla(210, 50%, 85%, 1);
-  --shadow-color: hsla(210, 40%, 52%, 0.4);
-  --bg-color: #141218;
   --expanded: 100%;
-  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   --text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
-  --text-shadow-light: 0 2px 4px rgba(255, 255, 255, 0.4);
   --transition-in: all 0.2s ease-out;
   --transition-out: all 0.4s ease-in;
   --filter-drop-shadow: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
@@ -24,11 +16,6 @@
     0 22.3px 17.9px rgba(0, 115, 230, 0.072),
     0 41.8px 33.4px rgba(0, 115, 230, 0.086),
     0 100px 80px rgba(0, 115, 230, 0.12);
-  --clr-neutral-100: hsl(0, 0%, 100%);
-  --clr-primary-100: hsl(205, 15%, 58%);
-  --clr-primary-400: hsl(215, 25%, 27%);
-  --clr-primary-800: hsl(217, 33%, 17%);
-  --clr-primary-900: hsl(218, 33%, 9%);
 }
 * {
   font-family: 'Philosopher', sans-serif;
@@ -137,11 +124,6 @@ a {
   text-justify: auto;
 }
 
-/* p,
-h6 {
-  margin-bottom: 1.5em;
-  color: var(--secondary-color);
-} */
 .list {
   color: var(--secondary-color);
   padding-left: 2rem;
@@ -149,9 +131,9 @@ h6 {
 .list > ::marker {
   font-size: 0.8rem;
   content: '\f0e7';
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome 7 Free';
   color: var(--secondary-color);
-  font-weight: 700;
+  font-weight: 900;
 }
 .list > li {
   padding-left: 0.5rem;
@@ -163,9 +145,9 @@ h6 {
 .side-list > ::marker {
   font-size: 0.8rem;
   content: '\f185';
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome 7 Free';
   color: var(--secondary-color);
-  font-weight: 700;
+  font-weight: 900;
 }
 .side-list > li {
   padding-left: 0.4rem;
@@ -188,59 +170,6 @@ img {
   height: auto;
 }
 
-/* .float {
-  filter: var(--filter-drop-shadow);
-  animation: up-down 1s infinite alternate;
-}
-
-@keyframes up-down {
-  from {
-    transform: translateY(-4px);
-  }
-  to {
-    transform: translateY(4px);
-  }
-} */
-
-/* .electron {
-  width: 130px;
-  height: 130px;
-  filter: var(--filter-drop-shadow);
-  animation: spin 6s linear infinite;
-}
-@keyframes spin {
-  100% {
-    transform: rotate(-360deg);
-  }
-} */
-/* .logoPulse {
-  width: 130px;
-  height: 130px;
-  filter: var(--filter-drop-shadow);
-  transition: transform 1s ease;
-  animation: in-out 1s infinite alternate;
-}
-@keyframes in-out {
-  from {
-    transform: scale(0.9);
-  }
-  to {
-    transform: scale(1);
-  }
-} */
-/* .opacity {
-  animation: stretch 1.5s ease-out alternate infinite;
-}
-
-@keyframes stretch {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-} */
 .trophy {
   filter: var(--filter-drop-shadow);
   max-width: 387px;
@@ -272,7 +201,6 @@ img {
 /*--------------------------------------------------------------
 Header:
 --------------------------------------------------------------*/
-
 .masthead {
   position: fixed;
   top: 0;
@@ -287,10 +215,8 @@ Header:
   vertical-align: middle;
   max-width: 100%;
   height: 8rem;
-  /* background-color: var(--tertiary-color); */
   /* Milk-glass effect */
   background: rgba(0, 7, 27, 0.6);
-  /* box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); */
   backdrop-filter: var(--backdrop-filter);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   z-index: 3;
@@ -361,7 +287,6 @@ Header:
   width: 3.2rem;
   height: 3.2rem;
   line-height: 3rem;
-  /* margin: 1rem auto; */
   text-align: center;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(5px);
@@ -420,7 +345,6 @@ Navigation: SideNav
   width: 140px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--border-radius-circle);
-  /* filter: brightness(1.1); */
 }
 
 .emblem {
@@ -468,7 +392,6 @@ Navigation: SideNav
   font-size: 1rem;
   width: 16rem;
   z-index: 6;
-  /* background-color: var(--tertiary-color); */
   background: rgba(0, 7, 27, 0.6);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
   backdrop-filter: var(--backdrop-filter);
@@ -548,6 +471,9 @@ Navigation: SideNav
 }
 
 [data-css-icon*='down'] i::after {
+  border-width: 0 var(--bdw) var(--bdw) 0;
+  top: calc(0px - (var(--icon-size) / 4));
+  transform: rotate(45deg);
   background: transparent;
   border-color: var(--c);
   border-style: solid;
@@ -558,11 +484,6 @@ Navigation: SideNav
   margin: 0;
   position: relative;
   width: var(--icon-size);
-}
-[data-css-icon*='down'] i::after {
-  border-width: 0 var(--bdw) var(--bdw) 0;
-  top: calc(0px - (var(--icon-size) / 4));
-  transform: rotate(45deg);
 }
 
 [open] > summary > [data-css-icon*='down'] i::after {
@@ -599,9 +520,9 @@ summary span:hover {
 summary::marker {
   display: none;
 }
-/* summary::-webkit-details-marker {
+summary::-webkit-details-marker {
   display: none;
-} */
+}
 
 summary + * {
   color: #fff;
@@ -679,8 +600,6 @@ Scroller
 .tag-list li {
   padding: 0.4rem 1rem 0.3rem;
   border-radius: 0.5rem;
-  /* background: var(--tertiary-color);
-  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900); */
   background: rgba(0, 7, 27, 0.6);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
   backdrop-filter: var(--backdrop-filter);
@@ -690,10 +609,6 @@ Scroller
 /*--------------------------------------------------------------
 Cards:
 --------------------------------------------------------------*/
-/* .main-area {
-  padding-bottom: 1rem;
-} */
-
 .cards {
   margin: 1rem auto;
   padding: 0;
@@ -727,9 +642,6 @@ Cards:
 Buttons
 ----------------------------------------------------------------*/
 
-.btn-group {
-  margin-top: 1rem;
-}
 .btn-block {
   padding: 0.5rem 1rem;
 }
@@ -772,7 +684,7 @@ Buttons
 .badge:hover {
   background-color: transparent;
   color: #000;
-  cursor: url('image/glove2.png'), auto;
+  cursor: url(images/glove2.png), auto;
 }
 .btn:hover:before,
 .badge:hover:before {
@@ -798,19 +710,14 @@ Sidebar:
   border-bottom: none;
   border-radius: 0.3rem 0 0 0;
 }
-.twin h1,
+.twin h2,
 .twin p {
   font-size: 1rem;
   font-weight: lighter;
 }
 
 .twin:last-of-type {
-  background-color: var(--tertiary-color);
-  /* 'Milk-glass' */
-  background: rgba(0, 7, 27, 0.6);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-  backdrop-filter: var(--backdrop-filter);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-align: left;
   border-radius: 0 0 0 0.3rem;
 }
@@ -820,7 +727,6 @@ Footer:
 --------------------------------------------------------------*/
 .footer {
   text-align: center;
-  /* width: fit content; */
   padding: 1.2rem 0;
   flex-grow: 1;
   background-color: transparent;
@@ -957,16 +863,6 @@ CSS Grid layout for wider screens, when browser supports grid:
       grid-area: nav;
     }
 
-    .main-nav ul {
-      position: fixed;
-      display: none;
-      flex-direction: column;
-    }
-
-    .open ul {
-      display: flex;
-    }
-
     .cards {
       margin: 0 auto;
       padding: 1rem;
@@ -980,7 +876,6 @@ CSS Grid layout for wider screens, when browser supports grid:
       height: auto;
       grid-template-columns: 8rem auto;
       background: rgba(0, 7, 27, 0.6);
-      /* box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); */
 
       backdrop-filter: var(--backdrop-filter);
 
@@ -991,14 +886,11 @@ CSS Grid layout for wider screens, when browser supports grid:
 
     .cards a:focus,
     .cards a:hover {
-      cursor: url('images/glove2.png'), auto;
+      cursor: url(images/glove2.png), auto;
     }
     .cardItem {
       margin: auto;
     }
-    /* .data-tilt {
-      border-radius: var(--border-radius);
-    } */
     .twin {
       max-width: 26rem;
       margin: 0 auto;
@@ -1013,12 +905,8 @@ CSS Grid layout for wider screens, when browser supports grid:
 
   @media only screen and (min-width: 60rem) {
     /*-----Pointer Sidenav---------*/
-    .bounce i {
-      font-size: 2.4rem;
-      color: #fff;
-    }
     .bounce {
-      cursor: url('images/glove2.png'), auto;
+      cursor: url(images/glove2.png), auto;
       animation: bounce 2s infinite;
     }
 
@@ -1040,9 +928,6 @@ CSS Grid layout for wider screens, when browser supports grid:
 
     .bounce:hover {
       animation: none;
-    }
-    .main-area {
-      margin-bottom: 0;
     }
     .cards {
       max-width: none;
@@ -1088,13 +973,6 @@ CSS Grid layout for wider screens, when browser supports grid:
         'nav footer footer';
     }
 
-    .main-area {
-      margin-bottom: 0;
-    }
-    .scroller {
-      height: auto;
-      grid-area: carousel;
-    }
     .card {
       max-width: 30rem;
       margin: auto;

@@ -39,7 +39,6 @@ class Modal extends HTMLElement {
               padding: clamp(1rem, 3vw, 2rem);
               opacity: 0;
               border-radius:50%;
-              background: rgb(48, 55, 62);
               background: linear-gradient(
                 0deg,
                 rgba(48, 55, 62, 1) 0%,
@@ -51,7 +50,6 @@ class Modal extends HTMLElement {
               justify-content: center;
               align-items: center;
               overflow: hidden;
-              text-align: center;
               box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
               pointer-events: none;
               transition: all 0.3s ease-out;
@@ -79,7 +77,6 @@ class Modal extends HTMLElement {
               content: "";
               position: absolute;
               inset: 2px;
-              background: rgb(48, 55, 62);
               background: linear-gradient(
                 0deg,
                 rgba(48, 55, 62, 1) 0%,
@@ -101,8 +98,7 @@ class Modal extends HTMLElement {
 
             header {
               font-family: 'Oswald', sans-serif;
-              padding: clamp(0.3rem, 1.5vw, 1rem);                
-              font-family: 'Oswald', sans-serif;
+              padding: clamp(0.3rem, 1.5vw, 1rem);
               color: #0be4ff;
               font-size: clamp( 
                   0.8rem,
@@ -130,18 +126,12 @@ class Modal extends HTMLElement {
               margin: 0;
               color: #fff;
               font-weight: 200;
-              hyphens: auto;
               line-height: calc(1em + 1rem);
               letter-spacing: 2px;
               text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
               z-index: 12;
             }
 
-
-            ::slotted(h1) {
-            }
-            ::slotted(p) {
-            }               
 
             #main {
                 padding: 0 clamp(1rem, 3vw, 2rem);
@@ -151,7 +141,6 @@ class Modal extends HTMLElement {
             }
 
             #actions {
-              align-self: middle;
                 padding: clamp(0.3rem, 1.5vw, 1rem);
                 display: flex;
                 justify-content: flex-end;       
@@ -166,7 +155,6 @@ class Modal extends HTMLElement {
               font-family: 'Oswald', sans-serif;
               font-size: clamp(0.7rem, 1.5vw, 1rem);
               text-transform: uppercase;
-              letter-spacing: 0.1em;
               font-weight: 300;
               letter-spacing: 3px;
               padding: clamp(0.4rem, 1.5vw, 1rem) clamp(1rem, 3vw, 2.5rem);
@@ -258,10 +246,6 @@ class Modal extends HTMLElement {
             </section>
         </div>
     `;
-    const slots = this.shadowRoot.querySelectorAll('slot');
-    slots[1].addEventListener('slotchange', (event) => {
-      console.dir(slots[1].assignedNodes());
-    });
     const backdrop = this.shadowRoot.querySelector('#backdrop');
     const confirmButton = this.shadowRoot.querySelector('#confirm-btn');
     backdrop.addEventListener('click', this._cancel.bind(this));

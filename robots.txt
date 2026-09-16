@@ -74,7 +74,9 @@ User-agent: Twitterbot
 Disallow: /favicon/
 
 # Catch-all: block image extensions and sensitive dirs for all other bots
+# (the link-preview image stays fetchable for LinkedIn, WhatsApp, Slack, etc.)
 User-agent: *
+Allow: /images/og-preview.jpg
 Disallow: /*.jpg$
 Disallow: /*.jpeg$
 Disallow: /*.png$

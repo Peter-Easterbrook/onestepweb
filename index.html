@@ -8,12 +8,10 @@
       content="Peter Easterbrook's Web Development Resume and Project Portfolio"
     />
     <meta name="robots" content="index, follow" />
-    <meta
-      name="keywords"
-      content="Peter Easterbrook, Web Development, Resume, Portfolio, JavaScript, React, Node.js, D3.js, Projects"
-    />
     <meta name="author" content="Peter Easterbrook" />
+    <!-- Link previews when the URL is shared (LinkedIn, WhatsApp, Slack, X, etc.) -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OneStep Web Development" />
     <meta property="og:url" content="https://www.onestepweb.dev/" />
     <meta
       property="og:title"
@@ -25,21 +23,15 @@
     />
     <meta
       property="og:image"
-      content="https://user-images.githubusercontent.com/59874288/99916616-75d95680-2d0b-11eb-9104-3f3c1bc9d237.gif"
+      content="https://www.onestepweb.dev/images/og-preview.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Peter Easterbrook's resume and project page"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Peter Easterbrook | Web Developer Resume &amp; Portfolio"
-    />
-    <meta
-      name="twitter:description"
-      content="Peter Easterbrook's Web Development Resume and Project Portfolio"
-    />
-    <meta
-      name="twitter:image"
-      content="https://user-images.githubusercontent.com/59874288/99916616-75d95680-2d0b-11eb-9104-3f3c1bc9d237.gif"
-    />
     <link rel="canonical" href="https://www.onestepweb.dev/" />
     <link
       rel="apple-touch-icon"
@@ -72,13 +64,13 @@
     <!-- CSS only -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Philosopher:wght@400;700&display=swap"
       as="style"
       onload="
         this.onload = null;
@@ -88,21 +80,24 @@
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=Philosopher:wght@400;700&display=swap"
       />
     </noscript>
     <!-- JavaScript only -->
     <script src="modal.js" defer></script>
     <script src="confetti.js" defer></script>
     <script src="dropdown.js" defer></script>
-    <script src="removeTilt.js" defer></script>
     <script src="sideTrigger.js" defer></script>
     <script src="time.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/93b32f94da.js"
+    <script src="rotateText.js" defer></script>
+    <script src="infiniteScroll.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
       crossorigin="anonymous"
-      defer
-    ></script>
+      referrerpolicy="no-referrer"
+    />
 
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
   </head>
@@ -116,7 +111,6 @@
         aria-expanded="false"
         role="button"
       >
-        <!-- <i class="bi bi-arrow-left-circle"></i> -->
         <img
           src="images/Pointer2.png"
           alt="Sidebar icon"
@@ -146,18 +140,11 @@
           </div>
           <img class="logo" src="images/Peter26.png" alt="peter" />
         </div>
-        <script src="rotateText.js"></script>
         <details>
           <summary>
             <span data-css-icon="down">React Apps<i></i></span>
           </summary>
           <div class="reactList">
-            <!-- <a
-              href="https://react-spacex-api-2021.vercel.app/"
-              class="sidenavItem"
-            >
-              Spacex GraphQL 2022
-            </a> -->
             <a href="https://globalevents2023.onrender.com/" class="sidenavItem"
               >Global Events 2023</a
             >
@@ -214,11 +201,6 @@
               href="https://markdown-previewer-ashy.vercel.app/"
               >Markdown App 2020</a
             >
-            <!-- <a
-              class="sidenavItem"
-              href="https://udemy-react-assignment-12.vercel.app/"
-              >Redux Calculator</a
-            > -->
           </div>
         </details>
         <details>
@@ -321,15 +303,14 @@
             <span data-css-icon="down">Weather Apps<i></i></span>
           </summary>
           <div class="reactList">
-            <a class="sidenavItem" href="https://weather.onestepweb.dev/">
-              OpenWeatherMap App w/ Recharts 2023
-            </a>
+            <a class="sidenavItem" href="https://weather.onestepweb.dev/"
+              >Weather w/ Recharts 2025</a
+            >
             <a
               class="sidenavItem"
               href="https://react-weather-v3-2021.vercel.app/"
+              >OpenWeather 2024</a
             >
-              OpenWeatherMap App 2024
-            </a>
             <a
               class="sidenavItem"
               href="https://peter-easterbrook.github.io/WeatherApp2022/"
@@ -406,12 +387,33 @@
         </li>
       </ul>
     </div>
-    <script src="infiniteScroll.js" defer></script>
     <!--scroller-->
     <main class="main-area">
       <ul class="cards">
-        <li class="cardItem double" id="card-1">
-          <figure class="card" id="tilt">
+        <li class="cardItem">
+          <figure class="card tilt">
+            <img
+              class="logoImgRnd"
+              src="images/LL2020.webp"
+              alt="ESL Exercises lion logo"
+            />
+            <figcaption class="caption">
+              <h2 class="caption-title">ESL Exercises 2026</h2>
+              <p>
+                An English learning app built with Expo, React Native &amp;
+                Firebase: interactive exercises, a CEFR level test, progress
+                tracking and a full admin panel.
+              </p>
+              <a
+                class="badge rounded-pill my-2"
+                href="https://play.google.com/store/apps/details?id=com.petereasterbro1.eslexercises25"
+                >ESL Exercises on Google Play</a
+              >
+            </figcaption>
+          </figure>
+        </li>
+        <li class="cardItem double">
+          <figure class="card tilt">
             <br />
             <img
               class="mt-2 trophy"
@@ -419,9 +421,9 @@
               alt="LinkedInFrontEnd"
             />
             <figcaption class="caption mb-4">
-              <h1 class="caption-title mb-5">
+              <h2 class="caption-title mb-5">
                 LinkedIn Developer Training: 2020-21
-              </h1>
+              </h2>
 
               <a
                 class="btn btn-block rounded-pill"
@@ -462,16 +464,15 @@
             </figcaption>
           </figure>
         </li>
-
         <li class="cardItem">
-          <figure class="card" id="tilt">
+          <figure class="card tilt">
             <img
               src="images/mongoNext.png"
               alt="Link to JavaScript certificates."
               class="logoImg"
             />
             <figcaption class="caption">
-              <h1 class="caption-title">NextJS &amp; MongoDB</h1>
+              <h2 class="caption-title">NextJS &amp; MongoDB</h2>
               <div class="d-block mt-3">
                 <a
                   href="https://huntsman-clothing-2025.vercel.app/"
@@ -493,17 +494,6 @@
                   class="badge rounded-pill my-2"
                   >mobile discovery app 2025</a
                 >
-                <!-- <a
-                  href="https://events.onestepweb.dev/"
-                  class="badge rounded-pill my-2"
-                  >Public events app 2021</a
-                > -->
-                <!--
-                <a
-                  href="https://meetups.onestepweb.dev/"
-                  class="badge rounded-pill my-2"
-                  >team meetup app 2021</a
-                > -->
                 <a
                   href="https://blog.onestepweb.dev/"
                   class="badge rounded-pill my-2"
@@ -514,14 +504,14 @@
           </figure>
         </li>
         <li class="cardItem">
-          <figure class="card" id="tilt">
+          <figure class="card tilt">
             <img
               src="images/react_logo.gif"
               alt="React certificate link."
               class="logoImg"
             />
             <figcaption class="caption">
-              <h1 class="caption-title">ReactJS Apps</h1>
+              <h2 class="caption-title">ReactJS Apps</h2>
 
               <ul class="list" style="margin-top: 0.7rem">
                 <li>React - Hooks, Router, Redux</li>
@@ -537,11 +527,6 @@
                   class="badge rounded-pill my-2"
                   >mobile divebase app 2023</a
                 >
-                <!-- <a
-                  href="https://globalevents2023.onrender.com/"
-                  class="badge rounded-pill my-2"
-                  >Top Global Events 2023</a
-                > -->
                 <a
                   href="https://property-marketplace-2021.vercel.app"
                   class="badge rounded-pill my-2"
@@ -556,65 +541,10 @@
             </figcaption>
           </figure>
         </li>
-        <li class="cardItem">
-          <figure class="card" id="tilt">
-            <img class="logoImgRnd" src="images/node.png" alt="NodeJS logo." />
-            <figcaption class="caption">
-              <h1 class="caption-title">Node &amp; EJS Shop App</h1>
-              <p>
-                Built w/ bcrypt, Express, EJS, mongodb, body-parser, csurf,
-                Morgan, Multer, SendGrid, PDFKit, Stripe &amp; Helmet.
-              </p>
-              <div class="d-block mt-2">
-                <a
-                  href="https://node-yelp-2023.onrender.com/"
-                  class="badge rounded-pill my-2"
-                  >node-ejs campsite app 2022</a
-                >
-                <a
-                  href="https://node-divegear-2023.onrender.com"
-                  class="badge rounded-pill my-2"
-                  >node-ejs dive shop app 2021</a
-                >
-              </div>
-            </figcaption>
-          </figure>
-        </li>
-        <li class="cardItem">
-          <figure class="card" id="tilt">
-            <img
-              src="images/webpack.png"
-              alt="Link to app"
-              class="logoImg"
-              style="border: none"
-            />
-            <figcaption class="caption">
-              <h1 class="caption-title">Webpack JS Apps 2023</h1>
-              <p>
-                Interactive apps with webpack, sass, bootstrap, axios, uuid,
-                axios, and more.
-              </p>
-              <div class="d-block mt-2">
-                <a
-                  class="badge rounded-pill my-2"
-                  href="https://dulcet-haupia-a36854.netlify.app/"
-                  >Calorie Tracker 2023</a
-                >
-                <a
-                  class="badge rounded-pill my-2"
-                  href="https://randomideasapp2023.onrender.com/"
-                  >Dev Ideas App 2023</a
-                >
-              </div>
-            </figcaption>
-          </figure>
-        </li>
-
         <li class="cardItem double">
-          <figure class="card" id="tilt">
+          <figure class="card tilt">
             <a
               href="https://www.coursera.org/account/accomplishments/specialization/certificate/3NZ2AVLZ76ER"
-              target="_blank"
             >
               <img
                 class="d3img"
@@ -623,7 +553,7 @@
               />
             </a>
             <figcaption class="caption">
-              <h1 class="caption-title">D3.JS</h1>
+              <h2 class="caption-title">D3.JS</h2>
               <p>
                 D3.JS focusses on the ever increasingly important topic of data
                 visualization, with Firebase on the backend.
@@ -670,16 +600,44 @@
             </figcaption>
           </figure>
         </li>
-
         <li class="cardItem">
-          <figure class="card" id="tilt">
+          <figure class="card tilt">
+            <img
+              src="images/webpack.png"
+              alt="Link to app"
+              class="logoImg"
+              style="border: none"
+            />
+            <figcaption class="caption">
+              <h2 class="caption-title">Webpack JS Apps 2023</h2>
+              <p>
+                Interactive apps with webpack, sass, bootstrap, axios, uuid
+                and more.
+              </p>
+              <div class="d-block mt-2">
+                <a
+                  class="badge rounded-pill my-2"
+                  href="https://dulcet-haupia-a36854.netlify.app/"
+                  >Calorie Tracker 2023</a
+                >
+                <a
+                  class="badge rounded-pill my-2"
+                  href="https://randomideasapp2023.onrender.com/"
+                  >Dev Ideas App 2023</a
+                >
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="cardItem">
+          <figure class="card tilt">
             <img
               src="images/javascriptNew.gif"
               alt="Link to certificate."
               class="logoImg"
             />
             <figcaption class="caption">
-              <h1 class="caption-title">JavaScript Apps</h1>
+              <h2 class="caption-title">JavaScript Apps</h2>
               <p>Event listeners, HTML injection &amp; Local Storage</p>
 
               <div class="d-block mt-2">
@@ -703,7 +661,7 @@
           </figure>
         </li>
         <li class="cardItem">
-          <figure class="card" id="tilt">
+          <figure class="card tilt">
             <img
               src="images/FCC.png"
               alt="Link to the FCC certificates."
@@ -711,7 +669,7 @@
             />
 
             <figcaption class="caption">
-              <h1 class="caption-title">FCC Fullstack 2020-21</h1>
+              <h2 class="caption-title">FCC Fullstack 2020-21</h2>
               <br />
               <ul class="list" style="margin-top: 0.7rem">
                 <li>Responsive Web Design</li>
@@ -732,19 +690,42 @@
             </figcaption>
           </figure>
         </li>
-
+        <li class="cardItem">
+          <figure class="card tilt">
+            <img class="logoImgRnd" src="images/node.png" alt="NodeJS logo." />
+            <figcaption class="caption">
+              <h2 class="caption-title">Node &amp; EJS Shop App</h2>
+              <p>
+                Built w/ bcrypt, Express, EJS, mongodb, body-parser, csurf,
+                Morgan, Multer, SendGrid, PDFKit, Stripe &amp; Helmet.
+              </p>
+              <div class="d-block mt-2">
+                <a
+                  href="https://node-yelp-2023.onrender.com/"
+                  class="badge rounded-pill my-2"
+                  >node-ejs campsite app 2022</a
+                >
+                <a
+                  href="https://node-divegear-2023.onrender.com"
+                  class="badge rounded-pill my-2"
+                  >node-ejs dive shop app 2021</a
+                >
+              </div>
+            </figcaption>
+          </figure>
+        </li>
         <li class="cardItem double">
           <a
             href="https://www.youracclaim.com/badges/62085c98-af57-4278-b0b4-6586cf42ff0d/linked_in_profile"
           >
-            <figure class="card" id="tilt">
+            <figure class="card tilt">
               <img
                 class="d3img"
                 src="images/GoogleIT.png"
                 alt="Link to Google IT certificate"
               />
               <figcaption class="caption">
-                <h1 class="caption-title">Google IT Tech Support 2020</h1>
+                <h2 class="caption-title">Google IT Tech Support 2020</h2>
                 <br />
                 <ul class="list">
                   <li>IT Support</li>
@@ -758,30 +739,7 @@
           </a>
         </li>
         <li class="cardItem">
-          <figure class="card" id="tilt">
-            <img
-              class="logoImg"
-              src="images/OpenAI.webp"
-              alt="Link to certificate."
-            />
-
-            <figcaption class="caption">
-              <h1 class="caption-title">AI Weather App 2023</h1>
-              <p>
-                This app integrates the OpenAI API into a React app to provide
-                verbose weather summary and appropriate clothing suggestions.
-              </p>
-              <a
-                class="badge rounded-pill my-2"
-                href="https://weather-ai-2023.vercel.app/"
-                >React OpenAI Weather 2023</a
-              >
-            </figcaption>
-          </figure>
-        </li>
-
-        <li class="cardItem">
-          <figure class="card" id="tilt">
+          <figure class="card tilt">
             <img
               src="images/GitDisco.gif"
               alt="Link to certificate."
@@ -789,7 +747,7 @@
               style="border: none"
             />
             <figcaption class="caption">
-              <h1 class="caption-title">GitHub VC &amp; CI/CD</h1>
+              <h2 class="caption-title">GitHub VC &amp; CI/CD</h2>
               <p>
                 A comprehensive knowledge of GitHub version control is a must.
               </p>
@@ -804,20 +762,19 @@
                   href="https://www.linkedin.com/learning/certificates/890fa05263901d3f6946450a8b6a2e16ba81102e94020f2540535f66b561ab2f?trk=share_certificate"
                   >Git &amp; GitHub 2022</a
                 >
-                <!-- <a class="badge rounded-pill my-2"  href="https://user-images.githubusercontent.com/59874288/98725497-77169500-2395-11eb-9fdf-70c4d32a160a.png">GitHub Learning 2020</a> -->
               </div>
             </figcaption>
           </figure>
         </li>
         <li class="cardItem">
-          <figure class="card" id="tilt">
+          <figure class="card tilt">
             <img
               class="logoImg"
               src="images/img4.gif"
               alt="Just for Fun image"
             />
             <figcaption class="caption">
-              <h1 class="caption-title">Just for Fun</h1>
+              <h2 class="caption-title">Just for Fun</h2>
               <a
                 class="badge rounded-pill my-2"
                 href="https://react-router-quote-app-2021.vercel.app/quotes"
@@ -836,52 +793,16 @@
             </figcaption>
           </figure>
         </li>
-        <!-- <li class="cardItem">
-          <a href="https://peter-easterbrook.github.io/50Projects50Days/">
-            <figure class="card" id="tilt">
-              <img
-                src="images/50Days.gif"
-                alt="Link to certificate."
-                class="logoImg"
-              />
-              <figcaption class="caption">
-                <h1 class="caption-title">50 Frontend Projects 2021</h1>
-                <p>
-                  50 frontend components made with HTML, CSS &amp; JavaScript.
-                </p>
-              </figcaption>
-            </figure>
-          </a>
-        </li> -->
-
-        <!-- <li class="cardItem">
-          <a href="https://bladerunner.onestepweb.dev/">
-            <figure class="card" id="tilt">
-              <img
-                src="images/BRPoster.gif"
-                alt="Link to certificate."
-                class="logoImg"
-              />
-              <figcaption class="caption">
-                <h1 class="caption-title">Blade Runner Tribute App</h1>
-                <p>
-                  A collection of JS &amp; CSS apps featuring Blade Runner
-                  images.
-                </p>
-              </figcaption>
-            </figure>
-          </a>
-        </li> -->
         <li class="cardItem">
           <a href="http://easterbrook.at/">
-            <figure class="card" id="tilt">
+            <figure class="card tilt">
               <img
                 src="images/LL2020.webp"
                 alt="Link to website."
                 class="logoImgRnd"
               />
               <figcaption class="caption">
-                <h1 class="caption-title">AT Language Service</h1>
+                <h2 class="caption-title">AT Language Service</h2>
                 <p>
                   This is the first page I made with HTML, CSS &amp; JavaScript
                   in 2006 and I've been developing it ever since.
@@ -892,14 +813,14 @@
         </li>
         <li class="cardItem">
           <a href="https://qualifications.onestepweb.dev/">
-            <figure class="card" id="tilt">
+            <figure class="card tilt">
               <img
                 src="images/osw-logo-25.png"
                 alt="Link to certificates."
                 class="logoImgRnd"
               />
               <figcaption class="caption">
-                <h1 class="caption-title">Education Certificates</h1>
+                <h2 class="caption-title">Education Certificates</h2>
                 <p>
                   A collection of the most relevant web development
                   certifications and proof of continuous learning.
@@ -913,35 +834,33 @@
     <!--************Sidebar Section*****************-->
     <section class="sidebar">
       <aside class="twin">
-        <h1 class="content-title" style="text-align: left">About this page:</h1>
+        <h2 class="content-title" style="text-align: left">About this page:</h2>
         <p class="hyphen">
-          Diese Seite spiegelt meinen Werdegang zur Webcode-Kompetenz im Jahr
-          2020 wider.
+          A shop window for OneStep Web Development: live demo apps and the
+          qualifications behind them.
         </p>
         <p class="hyphen">
-          Nachdem ich Photoshop in den fr&#252;hen 2000er Jahren entdeckt hatte,
-          habe ich die "Adobe Classroom in a Book" Anleitung durchgearbeitet und
-          war von der Manipulation digitaler Grafiken fasziniert. Kurz darauf
-          befand ich mich im Besitz meiner eigenen Website und Domain und begann
-          damit, sein Inhalt weiterzuentwickeln. Im Jahr 2020 habe ich mehr Zeit
-          in dieses Thema investieren k&#246;nnen und die Ergebnisse spiegeln
-          sich hier wider.
+          Every card links to a working project, from full-stack shops and data
+          visualisations to my flagship Android app, ESL Exercises. I have been
+          building for the web since the early 2000s and today create websites
+          and mobile apps with React, Next.js, Node and Expo. Have an idea for
+          an app? Get in touch and let&rsquo;s build it together.
         </p>
       </aside>
       <aside class="twin">
-        <h1 class="content-title">A few details:</h1>
+        <h2 class="content-title">A few details:</h2>
         <ul class="side-list">
-          <li>Staatsangeh&#246;rigkeit: Englisch</li>
+          <li>Nationality: British</li>
           <li>
-            Sprachen:
+            Languages:
             <ul class="side-list">
-              <li>Deutsch: B2/C1</li>
-              <li>Englisch: Muttersprache</li>
+              <li>German: B2/C1</li>
+              <li>English: native</li>
             </ul>
           </li>
-          <li>Anschrift: 1060 Wien, &#214;sterreich</li>
-          <li>peter@easterbrook.at</li>
-          <li>Interessen: Gym, Tauchen, Hiking.</li>
+          <li>Address: 1060&nbsp;Vienna, Austria</li>
+          <li>support@onestepweb.dev</li>
+          <li>Interests: gym, diving, hiking.</li>
         </ul>
       </aside>
     </section>
@@ -963,11 +882,11 @@
         >
           <i class="fab fa-github"></i
         ></a>
-        <a href="#" class="iconButton" aria-label="Time of day">
+        <span class="iconButton" aria-label="Time of day">
           <span id="time"></span>
-        </a>
+        </span>
         <a
-          href="mailto:peter@easterbrook.at"
+          href="mailto:support@onestepweb.dev"
           class="iconButton footerScale"
           aria-label="Link to Peter's Email"
         >
@@ -989,15 +908,8 @@
       </div>
     </footer>
     <script>
-      const d = new Date();
-      let year = d.getFullYear();
-      document.getElementById('year').innerHTML = year;
-    </script>
-    <script>
-      const modal = document.querySelector('uc-modal');
-      setTimeout(() => {
-        modal.open();
-      }, 2000);
+      document.getElementById('year').textContent = new Date().getFullYear();
+      setTimeout(() => document.querySelector('uc-modal').open(), 2000);
     </script>
     <script src="vanilla-tilt.min.js"></script>
     <script>
@@ -1006,7 +918,7 @@
       const initVanillaTiltOnLargeScreens = () => {
         const ww = window.innerWidth;
         if (ww >= 1248 && !vanillaTiltInitialized) {
-          VanillaTilt.init(document.querySelectorAll('#tilt'), {
+          VanillaTilt.init(document.querySelectorAll('.tilt'), {
             max: 15,
             speed: 300,
             glare: true,
@@ -1014,8 +926,7 @@
           });
           vanillaTiltInitialized = true;
         } else if (ww < 1248 && vanillaTiltInitialized) {
-          // Optionally, you can destroy VanillaTilt if the screen width is below the threshold
-          document.querySelectorAll('#tilt').forEach((element) => {
+          document.querySelectorAll('.tilt').forEach((element) => {
             if (element.vanillaTilt) {
               element.vanillaTilt.destroy();
             }
@@ -1028,7 +939,7 @@
         let timeout;
         return (...args) => {
           clearTimeout(timeout);
-          timeout = setTimeout(() => func.apply(this, args), wait);
+          timeout = setTimeout(() => func(...args), wait);
         };
       };
 

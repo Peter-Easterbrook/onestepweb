@@ -69,12 +69,8 @@ if (document.readyState === 'loading') {
   initInfiniteScroll();
 }
 
-const reducedMotionQuery = window.matchMedia(REDUCED_MOTION_MEDIA);
-
-if (typeof reducedMotionQuery.addEventListener === 'function') {
-  reducedMotionQuery.addEventListener('change', initInfiniteScroll);
-} else if (typeof reducedMotionQuery.addListener === 'function') {
-  reducedMotionQuery.addListener(initInfiniteScroll);
-}
+window
+  .matchMedia(REDUCED_MOTION_MEDIA)
+  .addEventListener('change', initInfiniteScroll);
 
 window.addEventListener('pageshow', initInfiniteScroll);

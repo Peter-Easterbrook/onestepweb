@@ -1,21 +1,12 @@
 (() => {
-  var currentTime = document.getElementById('time');
-  setInterval(function () {
-    var d = new Date();
-    var hours = d.getHours(),
-      minutes = d.getMinutes(),
-      ampm = hours >= 12 && hours < 24 ? 'pm' : 'am';
-    if (hours > 12) {
-      hours -= 12;
-    } else if (hours === 0) {
-      hours = 12;
-    }
-    if (minutes < 10) {
-      minutes = '0' + minutes;
-    }
-    var sepClass = '';
-    if (d.getMinutes() % 2 === 1) sepClass = 'trans';
-    var sep = '<span class="' + sepClass + '">:</span>';
-    currentTime.innerHTML = hours + sep + minutes + ' ' + ampm;
-  }, 1000);
+  const currentTime = document.getElementById('time');
+  const render = () => {
+    const d = new Date();
+    const minutes = String(d.getMinutes()).padStart(2, '0');
+    const hours = d.getHours() % 12 || 12;
+    const ampm = d.getHours() >= 12 ? 'pm' : 'am';
+    currentTime.innerHTML = `${hours}<span>:</span>${minutes} ${ampm}`;
+  };
+  render();
+  setInterval(render, 1000);
 })();

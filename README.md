@@ -20,6 +20,7 @@ This is a web-based resume and portfolio application showcasing Peter Easterbroo
 
   - React applications
   - NextJS & MongoDB projects
+  - ESL Exercises (Expo & React Native Android app)
   - JavaScript applications
   - D3.js data visualization
   - Node.js projects
@@ -62,7 +63,7 @@ start index.html  # Windows
 4. For development with live reload, consider using tools like:
 
 ```bash
-# Using Live Server in VSCode
+# Using Live Server in VSCode (configured for port 5504)
 # Install Live Server extension and click "Go Live"
 
 # OR using http-server
@@ -90,12 +91,12 @@ PEWDResume/
 ## Portfolio Sections
 
 - **Certifications**: LinkedIn Developer Training, FCC Fullstack, Google IT Tech Support, etc.
-- **Project Categories**: React Apps, JS Apps, D3 Data Visualization, NextJS & MongoDB, Node & EJS
+- **Project Categories**: React Apps, JS Apps, D3 Data Visualization, NextJS & MongoDB, Node & EJS, ESL Exercises
 - **Personal Information**: About, contact details, languages
 
 ## Contact
 
-- Email: peter.easterbrook@gmail.com
+- Email: support@onestepweb.dev
 - GitHub: [peter-easterbrook](https://github.com/peter-easterbrook)
 - LinkedIn: [petere70](https://www.linkedin.com/in/petere70/)
 - Website: [easterbrook.at](http://easterbrook.at/)
